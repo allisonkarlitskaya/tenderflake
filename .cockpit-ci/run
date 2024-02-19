@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -eux
+
+
+mkdir -p "${TEST_ATTACHMENTS}"
+cp -t "${TEST_ATTACHMENTS}" /etc/passwd
+
+test -f success
