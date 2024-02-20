@@ -4,6 +4,13 @@ set -eux
 
 
 mkdir -p "${TEST_ATTACHMENTS}"
+
+echo 1..3
 cp -t "${TEST_ATTACHMENTS}" /etc/passwd
+echo 'ok 1 - Copy /etc/passwd'
 
 test -f success
+echo 'ok 2 - Check success file'
+
+test -w /dev/kvm
+echo 'ok 3 - Check kvm access'
